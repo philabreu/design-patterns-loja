@@ -6,7 +6,6 @@ import lombok.Setter;
 import java.math.BigDecimal;
 
 public class Orcamento {
-
     @Getter
     private BigDecimal valor;
 
@@ -38,5 +37,9 @@ public class Orcamento {
         this.valor = valor;
         this.quantidadeItens = quantidadeItens;
         this.situacaoOrcamento = new EmAnalise();
+    }
+
+    public boolean isFinalizado() {
+        return situacaoOrcamento instanceof Finalizado;
     }
 }

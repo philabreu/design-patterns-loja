@@ -13,7 +13,7 @@ public class MainImpostos {
 
         CalculadoraImpostos calculadoraImpostos = new CalculadoraImpostos();
 
-        System.out.println("Valor do ISS: " + calculadoraImpostos.calcular(orcamento, new ISS()));
-        System.out.println("Valor do ICMS: " + calculadoraImpostos.calcular(orcamento, new ICMS()));
+        System.out.println("Valor do ISS: " + calculadoraImpostos.calcular(orcamento, new ISS(null)));
+        System.out.println("Valor do ICMS: " + calculadoraImpostos.calcular(orcamento, new ICMS(new ISS(null))));
     }
 }

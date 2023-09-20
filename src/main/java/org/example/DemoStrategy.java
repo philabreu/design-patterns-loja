@@ -1,9 +1,9 @@
 package org.example;
 
-import org.example.strategies.Order;
-import org.example.strategies.PayByCreditCard;
-import org.example.strategies.PayByPayPal;
-import org.example.strategies.PayStrategy;
+import org.example.strategy.Order;
+import org.example.strategy.PayByCreditCard;
+import org.example.strategy.PayByPayPal;
+import org.example.strategy.PayStrategy;
 
 import java.io.BufferedReader;
 import java.io.IOException;

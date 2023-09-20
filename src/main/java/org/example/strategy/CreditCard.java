@@ -1,4 +1,4 @@
-package org.example.strategies;
+package org.example.strategy;
 
 import lombok.Getter;
 import lombok.Setter;

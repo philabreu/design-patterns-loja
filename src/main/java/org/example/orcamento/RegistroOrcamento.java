@@ -20,7 +20,7 @@ public class RegistroOrcamento {
 
         adapter.post("http://api.external/orcamento", Map.of(
                         "valor", orcamento.getValor(),
-                        "quantidadeItens", orcamento.getQuantidadeItens()
+                        "quantidadeItens", orcamento.getItens()
                 )
         );
     }

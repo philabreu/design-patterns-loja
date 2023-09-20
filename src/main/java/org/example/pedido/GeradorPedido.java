@@ -1,6 +1,7 @@
 package org.example.pedido;
 
 import lombok.Getter;
+import org.example.orcamento.ItemOrcamento;
 import org.example.orcamento.Orcamento;
 
 import java.math.BigDecimal;
@@ -23,8 +24,8 @@ public class GeradorPedido {
     }
 
     public void executa() {
-        Orcamento orcamento = new Orcamento(this.valorOrcamento, this.quantidadeItens);
-
+        Orcamento orcamento = new Orcamento();
+        orcamento.adicionarItem(new ItemOrcamento(new BigDecimal("60")));
         Pedido pedido = new Pedido(cliente, LocalDateTime.now(), orcamento);
         System.out.println("salvar pedido no banco de dados.");
         System.out.println("enviar email com dados do novo pedido.");

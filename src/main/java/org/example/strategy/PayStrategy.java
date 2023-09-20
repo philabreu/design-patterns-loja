@@ -1,4 +1,4 @@
-package org.example.strategies;
+package org.example.strategy;
 
 public interface PayStrategy {
 

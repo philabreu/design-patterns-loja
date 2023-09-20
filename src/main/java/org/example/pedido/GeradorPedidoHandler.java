@@ -1,7 +1,9 @@
 package org.example.pedido;
 
+import org.example.orcamento.ItemOrcamento;
 import org.example.orcamento.Orcamento;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -14,7 +16,8 @@ public class GeradorPedidoHandler {
     }
 
     public void executar(GeradorPedido dados) {
-        Orcamento orcamento = new Orcamento(dados.getValorOrcamento(), dados.getQuantidadeItens());
+        Orcamento orcamento = new Orcamento();
+        orcamento.adicionarItem(new ItemOrcamento(new BigDecimal("100")));
 
         Pedido pedido = new Pedido(dados.getCliente(), LocalDateTime.now(), orcamento);
 

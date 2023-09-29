@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.pedido.EnviadorEmailPedido;
-import org.example.pedido.GeradorPedido;
-import org.example.pedido.GeradorPedidoHandler;
-import org.example.pedido.SalvadorPedidoBancoDados;
+import org.example.pedido.*;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -15,8 +12,11 @@ public class MainPedidos {
         int quantidadeItens = 10;
 
         GeradorPedido geradorPedido = new GeradorPedido(cliente, valorOrcamento, quantidadeItens);
-        GeradorPedidoHandler handler = new GeradorPedidoHandler(Arrays.asList(new SalvadorPedidoBancoDados(),
-                new EnviadorEmailPedido()
+        GeradorPedidoHandler handler = new GeradorPedidoHandler(
+                Arrays.asList(
+                        new SalvadorPedidoBancoDados(),
+                        new EnviadorEmailPedido(),
+                        new LoggerPedido()
         ));
         handler.executar(geradorPedido);
     }

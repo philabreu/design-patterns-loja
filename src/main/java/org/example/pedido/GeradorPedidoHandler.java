@@ -21,6 +21,6 @@ public class GeradorPedidoHandler {
 
         Pedido pedido = new Pedido(dados.getCliente(), LocalDateTime.now(), orcamento);
 
-        acoes.forEach(acao -> acao.executarAcao(pedido));
+        this.acoes.forEach(acao -> acao.executarAcao(pedido));
     }
 }

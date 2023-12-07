@@ -27,11 +27,10 @@ public class Rectangle extends Shape {
 
     @Override
     public boolean equals(Object otherObject) {
-        if (!(otherObject instanceof Rectangle) || (!super.equals(otherObject))) {
+        if (!(otherObject instanceof Rectangle otherShape) || (!super.equals(otherObject))) {
             return false;
         }
 
-        Rectangle otherShape = (Rectangle) otherObject;
         return otherShape.width == width && otherShape.height == height;
     }
 }

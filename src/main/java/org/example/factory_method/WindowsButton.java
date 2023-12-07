@@ -2,8 +2,6 @@ package org.example.factory_method;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class WindowsButton implements Button {
     JPanel panel = new JPanel();
@@ -34,11 +32,9 @@ public class WindowsButton implements Button {
     public void onclick() {
         button = new JButton("Exit");
 
-        button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                frame.setVisible(false);
-                System.exit(0);
-            }
+        button.addActionListener(e -> {
+            frame.setVisible(false);
+            System.exit(0);
         });
     }
 }

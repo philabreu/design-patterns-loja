@@ -22,9 +22,11 @@ public class DemoTemplateMethod {
         System.out.println("digite a mensagem: ");
         String message = reader.readLine();
 
-        System.out.println("\nEscolha rede social para postar.\n " +
-                "1 - Facebook\n" +
-                "2 - Twitter");
+        System.out.println("""
+
+                Escolha rede social para postar.
+                 1 - Facebook
+                2 - Twitter""");
         int choice = Integer.parseInt(reader.readLine());
 
         if (choice == 1) {

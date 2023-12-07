@@ -4,34 +4,9 @@ import lombok.Getter;
 
 import static java.util.Objects.nonNull;
 
-public class Manual {
-    @Getter
-    private final CarType carType;
-
-    @Getter
-    private final int seats;
-
-    @Getter
-    private final Engine engine;
-
-    @Getter
-    private final Transmission transmission;
-
-    @Getter
-    private final TripComputer tripcomputer;
-
-    @Getter
-    private final GPSNavigator gps;
-
-    public Manual(CarType carType, int seats, Engine engine, Transmission transmission, TripComputer tripcomputer,
-                  GPSNavigator gps) {
-        this.carType = carType;
-        this.seats = seats;
-        this.engine = engine;
-        this.transmission = transmission;
-        this.tripcomputer = tripcomputer;
-        this.gps = gps;
-    }
+public record Manual(@Getter CarType carType, @Getter int seats,
+                     @Getter Engine engine, @Getter Transmission transmission,
+                     @Getter TripComputer tripcomputer, @Getter GPSNavigator gps) {
 
     public String print() {
         String info = "";

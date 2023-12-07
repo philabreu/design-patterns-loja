@@ -1,7 +1,6 @@
 package org.example.observer;
 
 import java.io.File;
-import java.util.Objects;
 
 import static java.util.Objects.nonNull;
 

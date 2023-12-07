@@ -32,11 +32,13 @@ public class DemoStrategy {
 
             String continueChoice;
             do {
-                System.out.print("Por favor, escolha um produto:" + "\n" +
-                        "1 - Mother board" + "\n" +
-                        "2 - CPU" + "\n" +
-                        "3 - HDD" + "\n" +
-                        "4 - Memory" + "\n");
+                System.out.print("""
+                        Por favor, escolha um produto:
+                        1 - Mother board
+                        2 - CPU
+                        3 - HDD
+                        4 - Memory
+                        """);
 
                 int choice = Integer.parseInt(reader.readLine());
                 cost = priceOnProducts.get(choice);
@@ -48,9 +50,10 @@ public class DemoStrategy {
             } while (continueChoice.equalsIgnoreCase("Y"));
 
             if (isNull(payStrategy)) {
-                System.out.println("Please, select a payment method:" + "\n" +
-                        "1 - PalPay" + "\n" +
-                        "2 - Credit Card");
+                System.out.println("""
+                        Please, select a payment method:
+                        1 - PalPay
+                        2 - Credit Card""");
                 String paymentMethod = reader.readLine();
 
                 if (paymentMethod.equals("1")) {

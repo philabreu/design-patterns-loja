@@ -1,7 +1,6 @@
 package org.example.strategy;
 
 import lombok.Getter;
-import lombok.Setter;
 
 public class Order {
 

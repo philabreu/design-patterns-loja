@@ -1,7 +1,5 @@
 package org.example.cor;
 
-import java.util.Objects;
-
 import static java.util.Objects.isNull;
 
 public abstract class Middleware {

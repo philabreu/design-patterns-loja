@@ -28,11 +28,9 @@ public abstract class Shape {
 
     @Override
     public boolean equals(Object otherObject) {
-        if (!(otherObject instanceof Shape)) {
+        if (!(otherObject instanceof Shape otherShape)) {
             return false;
         }
-
-        Shape otherShape = (Shape) otherObject;
 
         return otherShape.x == x
                 && otherShape.y == y

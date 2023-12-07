@@ -25,11 +25,10 @@ public class Circle extends Shape {
 
     @Override
     public boolean equals(Object otherObject) {
-        if (!(otherObject instanceof Circle) || (!super.equals(otherObject))) {
+        if (!(otherObject instanceof Circle otherShape) || (!super.equals(otherObject))) {
             return false;
         }
 
-        Circle otherShape = (Circle) otherObject;
         return otherShape.radius == radius;
     }
 }

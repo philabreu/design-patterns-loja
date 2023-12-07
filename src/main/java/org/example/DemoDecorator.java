@@ -2,8 +2,6 @@ package org.example;
 
 import org.example.decorator.*;
 
-import java.io.FileOutputStream;
-
 public class DemoDecorator {
     public static void main(String[] args) {
         String salaryRecords = "Name, salary\nJohn Smith, 100000\nSteve Jobs, 912000";

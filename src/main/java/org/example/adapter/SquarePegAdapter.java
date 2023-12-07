@@ -12,10 +12,7 @@ public class SquarePegAdapter extends RoundPeg {
 
     @Override
     public double getRadius() {
-        double result;
         // Calcula um raio mínimo do círculo, que pode caber neste pino.
-        result = (Math.sqrt(Math.pow((squarePeg.getWidth() / 2), 2) * 2));
-
-        return result;
+        return (Math.sqrt(Math.pow((squarePeg.getWidth() / 2), 2) * 2));
     }
 }

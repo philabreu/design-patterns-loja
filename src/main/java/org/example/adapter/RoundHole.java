@@ -11,9 +11,6 @@ public class RoundHole {
     }
 
     public boolean fits(RoundPeg roundPeg) {
-        boolean result;
-        result = (this.getRadius() >= roundPeg.getRadius());
-
-        return result;
+        return (this.getRadius() >= roundPeg.getRadius());
     }
 }

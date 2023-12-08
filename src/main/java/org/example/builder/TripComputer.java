@@ -10,10 +10,10 @@ public class TripComputer {
         System.out.println("combustível: " + car.getFuel());
     }
 
-    public void showStatus(){
-        if (this.car.getEngine().isStarted()){
+    public void showStatus() {
+        if (this.car.getEngine().isStarted()) {
             System.out.println("car ligado");
-        }else {
+        } else {
             System.out.println("carro não ligou");
         }
     }

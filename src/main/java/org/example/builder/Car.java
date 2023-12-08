@@ -2,7 +2,7 @@ package org.example.builder;
 
 import lombok.Getter;
 
-import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 public class Car {
     @Getter
@@ -33,7 +33,7 @@ public class Car {
         this.engine = engine;
         this.transmission = transmission;
         this.tripcomputer = tripcomputer;
-        if (isNull(this.tripcomputer)){
+        if (nonNull(this.tripcomputer)){
             this.tripcomputer.setCar(this);
         }
         this.gps = gps;
